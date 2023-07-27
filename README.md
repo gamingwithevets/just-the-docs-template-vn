@@ -1,112 +1,113 @@
-# just-the-docs-template
+# just-the-docs-template-vn
 
-This is a *bare-minimum* template to create a [Jekyll] site that:
+*(được dịch từ bản tiếng Anh, liên kết vẫn ra trang tiếng Anh nhé!)*
 
-- uses the [Just the Docs] theme;
-- can be built and published on [GitHub Pages];
-- can be built and previewed locally, and published on other platforms.
+Đây là mẫu *tối thiểu* để tạo trang web [Jekyll]:
 
-More specifically, the created site:
+- sử dụng theme [Just the Docs];
+- có thể được xây dựng và xuất bản trên [GitHub Pages];
+- có thể được xây dựng và xem trước cục bộ và xuất bản trên các nền tảng khác.
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
+Cụ thể hơn, trang web đã tạo:
 
-To get started with creating a site, just click "[use this template]"!
+- sử dụng cách tiếp cận dựa trên gem, tức là sử dụng `Gemfile` và tải gem `just-the-docs`;
+- sử dụng [workflow GitHub Pages / Actions] để xây dựng và xuất bản trang web trên Trang GitHub.
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](#hosting-your-docs-from-an-existing-project-repo).
+Để bắt đầu tạo một trang web, chỉ cần nhấp vào "[use this template]"!
 
-After completing the creation of your new site on GitHub, update it as needed:
+Nếu bạn muốn duy trì tài liệu của mình trong thư mục `docs` của repository dự án hiện có, hãy xem phần [Lưu trữ tài liệu của bạn từ repository dự án hiện có](#lưu-trữ-tài-liệu-của-bạn-từ-repository-dự-án-hiện-có).
 
-## Replace the content of the template pages
+Sau khi hoàn thành việc tạo trang web mới của bạn trên GitHub, hãy cập nhật nó nếu cần:
 
-Update the following files to your own content:
+## Thay thế nội dung của các trang mẫu
 
-- `index.md` (your new home page)
-- `README.md` (information for those who access your site repo on GitHub)
+Cập nhật các tệp sau thành nội dung của riêng bạn:
 
-## Changing the version of the theme and/or Jekyll
+- `index.md` (trang chủ mới của bạn)
+- `README.md` (thông tin dành cho những ai truy cập repository của trang web của bạn trên GitHub)
 
-Simply edit the relevant line(s) in the `Gemfile`.
+## Thay đổi phiên bản của chủ đề và/hoặc Jekyll
 
-## Adding a plugin
+Chỉ cần chỉnh sửa (các) dòng có liên quan trong `Gemfile`.
 
-The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
+## Thêm plugin
 
-To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
+Chủ đề Just the Docs tự động bao gồm plugin [`jekyll-seo-tag`].
 
-- Add the following to your site's `Gemfile`:
+Để thêm một plugin bổ sung, bạn cần thêm nó vào `Gemfile` *và* trong `_config.yml`. Ví dụ: để thêm [`jekyll-default-layout`]:
 
-  ```ruby
-  gem "jekyll-default-layout"
-  ```
+- Thêm phần này vào `Gemfile` của trang web của bạn:
 
-- And add the following to your site's `_config.yml`:
+   ```ruby
+   gem "jekyll-default-layout"
+   ```
 
-  ```yaml
-  plugins:
-    - jekyll-default-layout
-  ```
+- Và thêm phần này vào `_config.yml` của trang web của bạn:
 
-Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
+   ```yaml
+   plugins:
+     - jekyll-default-layout
+   ```
 
-## Publishing your site on GitHub Pages
+Lưu ý: Nếu bạn đang sử dụng phiên bản Jekyll cũ hơn 3.5.0, hãy sử dụng key `gems` thay vì `plugins`.
 
-1.  If your created site is `YOUR-USERNAME/YOUR-SITE-NAME`, update `_config.yml` to:
+## Xuất bản trang web của bạn trên Trang GitHub
 
-    ```yaml
-    title: YOUR TITLE
-    description: YOUR DESCRIPTION
-    theme: just-the-docs
+1. Nếu trang web đã tạo của bạn là `TÊN-NGƯỜI-DÙNG/TÊN-TRANG-WEB`, hãy cập nhật `_config.yml` thành:
 
-    url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
+     ```yaml
+     title: TIÊU ĐỀ CỦA BẠN
+     description: MÔ TẢ CỦA BẠN
+     theme: just-the-docs
+	 
+     url: https://TÊN-NGƯỜI-DÙNG.github.io/TÊN-TRANG-WEB 
+     aux_links: # xóa nếu bạn không muốn liên kết này xuất hiện trên các trang của mình
+       Xem repository trên GitHub: https://github.com/TÊN-NGƯỜI-DÙNG/TÊN-TRANG-WEB
+     ```
 
-    aux_links: # remove if you don't want this link to appear on your pages
-      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
-    ```
+2. Đẩy `_config.yml` đã cập nhật vào trang web của bạn trên GitHub.
 
-2.  Push your updated `_config.yml` to your site on GitHub.
+3. Trong repo mới tạo của bạn trên GitHub:
+     - chuyển đến tab `Settings` -> `Pages` -> `Build and deployment`, sau đó chọn `Source`: `GitHub Actions`.
+     - nếu có bất kỳ Action nào không thành công, hãy chuyển đến tab `Actions` và nhấp vào `Re-run jobs`.
 
-3.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
+## Xây dựng và xem trước trang web của bạn cục bộ
 
-## Building and previewing your site locally
+Giả sử [Jekyll] và [Bundler] được cài đặt trên máy tính của bạn:
 
-Assuming [Jekyll] and [Bundler] are installed on your computer:
+1. Thay đổi thư mục làm việc của bạn thành thư mục gốc của trang web của bạn.
 
-1.  Change your working directory to the root directory of your site.
+2. Chạy lệnh `bundle install`.
 
-2.  Run `bundle install`.
+3. Chạy lệnh `bundle exec jekyll serve` để xây dựng trang web của bạn và xem trước tại `localhost:4000`.
 
-3.  Run `bundle exec jekyll serve` to build your site and preview it at `localhost:4000`.
+     Trang web đã xây dựng được lưu trữ trong thư mục `_site`.
 
-    The built site is stored in the directory `_site`.
+## Xuất bản trang web đã xây dựng của bạn trên một nền tảng khác
 
-## Publishing your built site on a different platform
+Chỉ cần tải lên tất cả các tệp trong thư mục `_site`.
 
-Just upload all the files in the directory `_site`.
+## Tùy chỉnh
 
-## Customization
+Bạn được tự do tùy chỉnh các trang web mà bạn tạo bằng mẫu này, theo bất kỳ cách nào bạn muốn!
 
-You're free to customize sites that you create with this template, however you like!
+[Xem tài liệu của chúng tôi][Just the Docs] để tìm hiểu thêm về cách sử dụng chủ đề này.
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+## Lưu trữ tài liệu của bạn từ repository dự án hiện có
 
-## Hosting your docs from an existing project repo
+Bạn có thể muốn duy trì tài liệu của mình trong kho dự án hiện có. Thay vì tạo một repository mới bằng [mẫu just-the-docs](https://github.com/just-the-docs/just-the-docs-template), bạn có thể sao chép các tệp mẫu vào repository hiện có của mình và định cấu hình luồng công việc Github Actions của mẫu để xây dựng từ thư mục `docs`. Bạn có thể sao chép mẫu vào máy cục bộ của mình hoặc tải xuống tệp `.zip` để truy cập các tệp.
 
-You might want to maintain your docs in an existing project repo. Instead of creating a new repo using the [just-the-docs template](https://github.com/just-the-docs/just-the-docs-template), you can copy the template files into your existing repo and configure the template's Github Actions workflow to build from a `docs` directory. You can clone the template to your local machine or download the `.zip` file to access the files.
+### Sao chép tệp mẫu
 
-### Copy the template files
+1. Tạo thư mục `.github/workflows` tại gốc dự án của bạn nếu repository của bạn chưa có. Sao chép tệp `pages.yml` vào thư mục này. GitHub Actions sẽ tìm kiếm tệp workflow trong thư mục này.
 
-1.  Create a `.github/workflows` directory at your project root if your repo doesn't already have one. Copy the `pages.yml` file into this directory. GitHub Actions searches this directory for workflow files.
+2. Tạo một thư mục `docs` tại gốc dự án của bạn và sao chép tất cả các tệp mẫu còn lại vào thư mục này.
 
-2.  Create a `docs` directory at your project root and copy all remaining template files into this directory.
+### Sửa đổi quy trình làm việc của GitHub Actions
 
-### Modify the GitHub Actions workflow
+Workflow GitHub Actions xây dựng và triển khai trang web của bạn lên GitHub Actions được xác định bởi tệp `pages.yml`. Bạn sẽ cần chỉnh sửa tệp này để các bước build và deploy của bạn nhìn vào thư mục `docs` của bạn, thay vì thư mục gốc của dự án.
 
-The GitHub Actions workflow that builds and deploys your site to Github Pages is defined by the `pages.yml` file. You'll need to edit this file to that so that your build and deploy steps look to your `docs` directory, rather than the project root.
-
-1.  Set the default `working-directory` param for the build job.
+1.  Đặt tham số `working-directory` mặc định cho build job.
 
     ```yaml
     build:
@@ -116,7 +117,7 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
           working-directory: docs
     ```
 
-2.  Set the `working-directory` param for the Setup Ruby step.
+2.  Đặt tham số `working-directory` cho bước Setup Ruby.
 
     ```yaml
     - name: Setup Ruby
@@ -128,7 +129,7 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
           working-directory: '${{ github.workspace }}/docs'
     ```
 
-3.  Set the path param for the Upload artifact step:
+3.  Đặt tham số path cho bước Upload artifact:
 
     ```yaml
     - name: Upload artifact
@@ -137,7 +138,7 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
           path: "docs/_site/"
     ```
 
-4.  Modify the trigger so that only changes within the `docs` directory start the workflow. Otherwise, every change to your project (even those that don't affect the docs) would trigger a new site build and deploy.
+4.  Sửa đổi trình kích hoạt để chỉ những thay đổi trong thư mục `docs` mới bắt đầu workflow. Mặt khác, mọi thay đổi đối với dự án của bạn (ngay cả những thay đổi không ảnh hưởng đến tài liệu) sẽ kích hoạt việc build và deploy trang web mới.
 
     ```yaml
     on:
@@ -148,24 +149,24 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
           - "docs/**"
     ```
 
-## Licensing and Attribution
+## Cấp phép và Ghi công
 
-This repository is licensed under the [MIT License]. You are generally free to reuse or extend upon this code as you see fit; just include the original copy of the license (which is preserved when you "make a template"). While it's not necessary, we'd love to hear from you if you do use this template, and how we can improve it for future use!
+Kho lưu trữ này được cấp phép theo [Giấy phép MIT]. Nói chung, bạn được tự do sử dụng lại hoặc mở rộng mã này khi bạn thấy phù hợp; chỉ bao gồm bản gốc của giấy phép (được giữ nguyên khi bạn "làm tiêu bản"). Mặc dù không cần thiết nhưng chúng tôi muốn nghe ý kiến từ bạn nếu bạn sử dụng mẫu này và cách chúng tôi có thể cải thiện mẫu để sử dụng trong tương lai!
 
-The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party [starter workflows]. A copy of their MIT License is available in [actions/starter-workflows].
+Workflow triển khai GitHub Actions chủ yếu dựa trên [starter workflow] bên hỗn hợp của GitHub. Bản sao Giấy phép MIT của họ có sẵn trong [actions/starter-workflows].
 
 ----
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+[^1]: [Có thể mất tối đa 10 phút để các thay đổi đối với trang web của bạn xuất bản sau khi bạn đẩy các thay đổi lên GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
 [Jekyll]: https://jekyllrb.com
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/
 [GitHub Pages]: https://docs.github.com/en/pages
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
+[workflow GitHub Pages / Actions]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
 [Bundler]: https://bundler.io
 [use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
 [`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
 [`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
-[MIT License]: https://en.wikipedia.org/wiki/MIT_License
-[starter workflows]: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
+[Giấy phép MIT]: https://en.wikipedia.org/wiki/MIT_License
+[starter workflow]: https://github.com/actions/starter-workflows/blob/main/pages/jekyll.yml
 [actions/starter-workflows]: https://github.com/actions/starter-workflows/blob/main/LICENSE
